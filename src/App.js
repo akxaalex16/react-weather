@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import City from "./City";
+import Conditions from "./Conditions";
+import "./Conditions.css";
+import Forecast from "./Forecast";
+import "./Forecast.css";
+import Footer from "./Footer";
+import "./Footer.css";
+
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        <form>
+          <input
+            className="search-input"
+            type="search"
+            placeholder="Search city here"
+          ></input>
+          <input className="search-button" type="submit" value="Search"></input>
+          <input className="fahrenheit" type="submit" value="°F"></input>
+          <input className="celsius" type="submit" value="°C"></input>{" "}
+        </form>
+        <hr />
+        <City />
+        <Conditions />
+        <span className="forecast-title">Weekly Forecast</span>
+        <hr />
+        <Forecast />
+        <Forecast />
+        <Forecast />
+        <Forecast />
+        <Forecast />
+        <Forecast />
+      </div>
+      <Footer />
     </div>
   );
 }
