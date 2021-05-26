@@ -4,3 +4,7 @@
   font-weight: 600;
   text-transform: capitalize;
 }
+
+.City .forecast-title {
+  font-size: 30px;
+}

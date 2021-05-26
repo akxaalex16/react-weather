@@ -33,10 +33,6 @@
   background: #b33b64;
 }
 
-.App .forecast-title {
-  font-size: 30px;
-}
-
 .App .fahrenheit {
   position: relative;
   right: -30px;
