@@ -1,4 +1,5 @@
 import React from "react";
+import AnimatedIcon from "./AnimatedIcon";
 
 export default function MainTemp(props) {
   return (
@@ -8,10 +9,7 @@ export default function MainTemp(props) {
         <span className="symbol">°F</span>
       </h1>
       <main className="icon-background">
-        <img
-          src={`http://openweathermap.org/img/wn/${props.icon}@2x.png`}
-          alt="Light Rain"
-        />
+        <AnimatedIcon code={props.icon} />
       </main>
       <p>{props.description}</p>
       <h4>⬆ {props.max}° | </h4>
