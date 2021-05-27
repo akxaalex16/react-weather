@@ -14,8 +14,8 @@ export default function MainTemp(props) {
         />
       </main>
       <p>{props.description}</p>
-      <h4>⬆ {props.max} ° | </h4>
-      <h4>⬇ {props.min} °</h4>
+      <h4>⬆ {props.max}° | </h4>
+      <h4>⬇ {props.min}°</h4>
     </div>
   );
 }
