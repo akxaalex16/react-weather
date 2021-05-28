@@ -4,7 +4,7 @@ import axios from "axios";
 import CitySearch from "./CitySearch";
 
 export default function City(props) {
-  let [units, setUnits] = useState(null);
+  let [units, setUnits] = useState("fahrenheit");
   let [city, setCity] = useState(props.defaultCity);
   let [weatherData, setWeatherData] = useState({ ready: false });
 
@@ -42,16 +42,12 @@ export default function City(props) {
 
   function showFahrenheit(event) {
     event.preventDefault();
-    let temperatureFahrenheit = weatherData.temperature;
-    setUnits(temperatureFahrenheit);
+    setUnits("fahrenheit");
   }
 
   function showCelsius(event) {
     event.preventDefault();
-    let temperatureCelsius = Math.round(
-      ((weatherData.temperature - 32) * 5) / 9
-    );
-    setUnits(temperatureCelsius);
+    setUnits("celsius");
   }
 
   if (weatherData.ready) {
