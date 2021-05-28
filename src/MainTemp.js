@@ -5,8 +5,11 @@ export default function MainTemp(props) {
   return (
     <div className="MainTemp">
       <h1>
-        <span className="temperature-now"> {props.temperature} </span>
-        <span className="symbol">°F</span>
+        <span className="temperature-now">
+          {" "}
+          {props.temperature} {props.units}{" "}
+        </span>
+        <span className="symbol">°</span>
       </h1>
       <main className="icon-background">
         <AnimatedIcon code={props.icon} />

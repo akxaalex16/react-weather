@@ -4,6 +4,7 @@ import axios from "axios";
 import CitySearch from "./CitySearch";
 
 export default function City(props) {
+  let [units, setUnits] = useState(null);
   let [city, setCity] = useState(props.defaultCity);
   let [weatherData, setWeatherData] = useState({ ready: false });
 
@@ -39,6 +40,20 @@ export default function City(props) {
     setCity(event.target.value);
   }
 
+  function showFahrenheit(event) {
+    event.preventDefault();
+    let temperatureFahrenheit = weatherData.temperature;
+    setUnits(temperatureFahrenheit);
+  }
+
+  function showCelsius(event) {
+    event.preventDefault();
+    let temperatureCelsius = Math.round(
+      ((weatherData.temperature - 32) * 5) / 9
+    );
+    setUnits(temperatureCelsius);
+  }
+
   if (weatherData.ready) {
     return (
       <div className="City">
@@ -50,11 +65,26 @@ export default function City(props) {
             placeholder="Search city here"
           ></input>
           <input className="search-button" type="submit" value="Search"></input>
-          <input className="fahrenheit" type="submit" value="°F"></input>
-          <input className="celsius" type="submit" value="°C"></input>{" "}
+          <input
+            className="fahrenheit"
+            type="submit"
+            value="°F"
+            onClick={showFahrenheit}
+          ></input>
+          <input
+            className="celsius"
+            type="submit"
+            value="°C"
+            onClick={showCelsius}
+          ></input>{" "}
         </form>
         <hr />
-        <CitySearch data={weatherData} date={weatherData.date} city={city} />
+        <CitySearch
+          data={weatherData}
+          date={weatherData.date}
+          city={city}
+          units={units}
+        />
       </div>
     );
   } else {

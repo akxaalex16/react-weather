@@ -19,6 +19,7 @@ export default function CitySearch(props) {
         min={props.data.min}
         max={props.data.max}
         icon={props.data.icon}
+        units={props.units}
       />
       <Conditions humidity={props.data.humidity} wind={props.data.wind} />
       <span className="forecast-title">Weekly Forecast</span>

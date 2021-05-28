@@ -29,6 +29,7 @@ export default function AnimatedIcon(props) {
         icon={codeMapping[props.code]}
         color="white"
         size={64}
+        blue
         animate={true}
       />
     </div>
