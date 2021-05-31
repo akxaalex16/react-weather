@@ -75,12 +75,7 @@ export default function City(props) {
           ></input>{" "}
         </form>
         <hr />
-        <CitySearch
-          data={weatherData}
-          date={weatherData.date}
-          city={city}
-          units={units}
-        />
+        <CitySearch data={weatherData} date={weatherData.date} units={units} />
       </div>
     );
   } else {

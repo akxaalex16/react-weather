@@ -11,7 +11,7 @@ import "./Forecast.css";
 export default function CitySearch(props) {
   return (
     <div className="CitySearch">
-      <h1>{props.city}</h1>
+      <h1> {props.data.city} </h1>
       <DateTime dateFormatted={props.date} />
       <MainTemp
         temperature={Math.round(props.data.temperature)}
