@@ -21,23 +21,14 @@
   display: block;
   margin: 0 auto;
   width: 90px;
+  position: relative;
+  top: 7px;
 }
 
 .MainTemp p {
   margin-top: 20px;
   font-size: 20px;
   text-transform: capitalize;
-}
-
-.MainTemp main {
-  position: relative;
-  left: 95px;
-  top: 10px;
-  background-color: rgba(255, 255, 255, 0.4);
-  border: 2px solid #473a93;
-  width: 100px;
-  height: 100px;
-  border-radius: 300px;
 }
 
 .MainTemp .symbol {

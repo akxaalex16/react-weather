@@ -20,7 +20,7 @@ export default function City(props) {
       min: Math.round(response.data.main.temp_min),
       max: Math.round(response.data.main.temp_max),
       icon: response.data.weather[0].icon,
-      city: response.data.main,
+      city: response.data.name,
     });
   }
 
