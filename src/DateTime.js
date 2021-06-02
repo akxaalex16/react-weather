@@ -8,7 +8,7 @@ export default function DateTime(props) {
       return "AM";
     }
   }
-  console.log(props.dateFormatted);
+
   let days = [
     "Sunday",
     "Monday",
@@ -19,6 +19,7 @@ export default function DateTime(props) {
     "Saturday",
   ];
   let day = days[props.dateFormatted.getDay()];
+
   let hour = [
     12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
     11,
@@ -31,6 +32,7 @@ export default function DateTime(props) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
+
   let months = [
     "january",
     "February",

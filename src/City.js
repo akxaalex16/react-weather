@@ -9,7 +9,6 @@ export default function City(props) {
   let [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response) {
-    console.log(response.data);
     setWeatherData({
       ready: true,
       date: new Date(response.data.dt * 1000),
@@ -21,6 +20,7 @@ export default function City(props) {
       max: Math.round(response.data.main.temp_max),
       icon: response.data.weather[0].icon,
       city: response.data.name,
+      coordinates: response.data.coord,
     });
   }
 

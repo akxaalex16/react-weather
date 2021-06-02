@@ -24,12 +24,7 @@ export default function CitySearch(props) {
       <Conditions humidity={props.data.humidity} wind={props.data.wind} />
       <span className="forecast-title">Weekly Forecast</span>
       <hr />
-      <Forecast />
-      <Forecast />
-      <Forecast />
-      <Forecast />
-      <Forecast />
-      <Forecast />
+      <Forecast coordinates={props.data.coordinates} />
     </div>
   );
 }
