@@ -1,11 +1,12 @@
 import React from "react";
+import AnimatedIcon from "./AnimatedIcon";
 
 export default function Forecast() {
   return (
     <div className="Forecast">
       <span className="forecast-date"> Sunday </span>
       <main className="forecast-icon">
-        <img src="http://openweathermap.org/img/wn/11d@2x.png" alt="" />
+        <AnimatedIcon code="01d" size={40} />
       </main>
       <span className="forecast-temperature">
         <span className="forecast-temp-max">82° | </span>

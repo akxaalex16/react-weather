@@ -10,7 +10,7 @@ export default function MainTemp(props) {
           <span className="symbol">°F</span>
         </h1>
         <main className="icon-background">
-          <AnimatedIcon code={props.icon} />
+          <AnimatedIcon code={props.icon} size={64} />
         </main>
         <p>{props.description}</p>
         <h4>⬆ {props.max}° | </h4>

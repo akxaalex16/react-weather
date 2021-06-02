@@ -10,10 +10,6 @@
   color: #fff;
 }
 
-.Forecast img {
-  width: 50px;
-}
-
 .Forecast .forecast-date {
   position: relative;
   top: 14px;
