@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function Humidity(props) {
-  //get response for UV Index with one call api when getting the weekly forecast.
   return (
     <div className="Conditions">
       <div className="row">
@@ -15,12 +14,6 @@ export default function Humidity(props) {
           <div className="Wind">
             <div>Wind</div>
             <div>{props.wind} mph </div>
-          </div>
-        </div>
-        <div className="col-4">
-          <div className="UV-Index">
-            <div>UV Index</div>
-            <div>Low</div>
           </div>
         </div>
       </div>

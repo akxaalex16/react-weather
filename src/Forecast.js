@@ -1,8 +1,10 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import ForecastDay from "./ForecastDay";
+import UVI from "./UVI";
 
 export default function Forecast(props) {
+  let [uvi, setUvi] = useState(null);
   let [loaded, setLoaded] = useState(false);
   let [forecastData, setForecastData] = useState(null);
 
@@ -11,6 +13,7 @@ export default function Forecast(props) {
   }, [props.coordinates]);
 
   function handleResponse(response) {
+    setUvi(response.data.current.uvi);
     setForecastData(response.data.daily);
     setLoaded(true);
   }
@@ -22,13 +25,14 @@ export default function Forecast(props) {
           if (index > 0 && index < 7) {
             return (
               <div key={index}>
-                <ForecastDay data={weeklyForecast} />
+                <ForecastDay data={weeklyForecast} units={props.units} />
               </div>
             );
           } else {
             return null;
           }
         })}
+        <UVI uvi={uvi} />
       </div>
     );
   } else {
