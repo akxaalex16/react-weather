@@ -1,1 +1,4 @@
-.CitySearch .cityName {font-family: 'Cinzel Decorative', cursive;}
+.CitySearch .cityName {
+  font-weight: bolder;
+  font-size: 50px;
+}
