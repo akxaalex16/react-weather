@@ -11,10 +11,10 @@ export default function Footer() {
           target="_blank"
           rel="noreferrer"
         >
-          GitHub
+          GitHub,
         </a>
         <br />
-        and hosted on{" "}
+        hosted on{" "}
         <a
           href="https://friendly-clarke-aa1415.netlify.app"
           target="_blank"
