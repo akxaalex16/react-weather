@@ -1,4 +1,6 @@
 .CitySearch .cityName {
   font-weight: bolder;
   font-size: 50px;
+  position: relative;
+  top: -10px;
 }
